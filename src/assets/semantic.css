@@ -1,0 +1,51 @@
+.ui.header {
+  font-family: Open Sans, sans-serif !important;
+  font-weight: 300 !important;
+}
+
+.ui.form .field > label {
+  font-weight: 400 !important;
+}
+
+button>ui>button {
+  font-family: Open Sans, sans-serif !important;
+  border-radius: 2px;
+  font-weight: 300 !important;
+
+  &.icon.ms-info-button {
+    background: none;
+    color:  #008D8D;
+  }
+
+  &.ms-primary-button {
+    background: #034D99;
+    color: #EFF4F0;
+
+    &:hover {
+      background: #023E7B;
+      color: white;
+    }
+
+    &.basic {
+      box-shadow: 0 0 0 1px #034D99 inset;
+      color: #034D99 !important;
+    }
+
+    &.basic:hover {
+      box-shadow: 0 0 0 1px #1676D9 inset;
+      color: #1676D9 !important;
+    }
+
+  }
+
+  &.ms-complement-button {
+    background: #EB6A00;
+    color: #EFF4F0;
+
+    &:hover {
+      background: #BD5600;
+      color: white;
+    }
+  }
+}
+

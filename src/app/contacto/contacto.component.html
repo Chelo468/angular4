@@ -1,0 +1,14 @@
+<h2>{{titulo}}</h2>
+
+<div *ngIf="parametro">
+	<h5>Parametro: {{parametro}}</h5>
+	<button (click)="redirigir('2')" *ngIf="parametro != '2'">Ir con parametro 2</button>
+	<button (click)="redirigir('4')" *ngIf="parametro != '4'">Ir con parametro 4</button>
+	<button (click)="redirigir('6')" *ngIf="parametro != '6'">Ir con parametro 6</button>
+</div>
+
+<div *ngIf="!parametro">
+	<button (click)="redirigir('2')">Ir con parametro 2</button>
+	<button (click)="redirigir('4')">Ir con parametro 4</button>
+	<button (click)="redirigir('6')">Ir con parametro 6</button>
+</div>

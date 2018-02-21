@@ -1,0 +1,103 @@
+<div class="ui basic segment ms-row"><!-- ng-show="$ctrl.errors.length"-->
+    <div class="ms-column fluid" style="padding-top: 25px">
+        <div id="ms-login-errors" class="ui icon error message">
+            <i class="warning sign icon"></i>
+            <div class="content">
+                <div class="header">
+                    Se ha producido un error
+                </div>
+                <!--<p>{{$ctrl.errors[0]}}</p>-->
+            </div>
+        </div>
+    </div>
+</div>
+<div class="ui basic segment ms-row fluid">
+    <div id="ms-login-form" class="ms-grid ui segment">
+        <div class="ms-row fluid">
+            <h2 id="ms-b-digital" class="ui center aligned header">
+                Iniciar sesión en B DIGITAL
+            </h2>
+        </div>
+        <div class="ms-row">
+            <div class="ms-column fluid">
+                <div class="ui two column middle aligned very relaxed stackable grid basic segment">
+                    <div class="column">
+                        <!--form: name="$ctrl.loginForm" ng-submit="$ctrl.login()"-->
+                        <form 
+                              novalidate
+                              class="ui form"
+                              >
+                            <div class="field">
+                                <label for="txt_username">CORREO ELECTRÓNICO</label>
+                                <input id="txt_username"
+                                       required
+                                       type="email"
+                                       name="username"
+                                       placeholder="ejemplo@dominio.com"
+                                       [(ngModel)]="credentials.username"
+                                       ><!--ng-model="$ctrl.credentials.username"-->
+
+                                <div class="ms-error-block"
+                                     
+                                     role="alert">
+                                        <!--ng-messages="$ctrl.loginForm.username.$error"
+                                     ng-if="$ctrl.loginForm.username.$touched"-->
+                                    <p class="ms-error" ng-message="required">Debes ingresar un correo electrónico.</p>
+                                    <p class="ms-error" ng-message="email">No ingresaste un correo electrónico
+                                        válido.</p>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label for="txt_password">CONTRASEÑA</label>
+                                <input id="txt_password"
+                                       ng-minlength="6"
+                                       ng-maxlength="12"
+                                       required
+                                       type="password"
+                                       name="password"
+                                       placeholder="Contraseña"
+                                       [(ngModel)]="credentials.password"
+                                       ><!--ng-model="$ctrl.credentials.password"-->
+
+                                <div class="ms-error-block"
+                                     
+                                     role="alert"><!--ng-messages="$ctrl.loginForm.password.$error"
+                                     ng-if="$ctrl.loginForm.password.$touched"-->
+                                    <p class="ms-error" ng-message="required">Debes ingresar una contraseña.</p>
+                                    <p class="ms-error" ng-message-exp="['minlength', 'maxlength']">
+                                        Tu contraseña debe tener entre 6 y 12 caracteres de longitud.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <p id="ms-sign-up-link"><span>¿No tienes cuenta?</span> <a ng-link="['SignUp']">
+                                    Registrarse</a>
+                                </p>
+                            </div>
+
+                            <div class="field">
+                                <p id="ms-sign-up-link"> <span>¿Olvidaste tu contraseña?</span> <a ng-link="['Restore']">
+                                        Reestablecer
+                                    </a>
+                                </p> 
+                            </div>
+
+                            <button id="btn_ms-login-button" class="ui button ms-complement-button" type="submit">INICIAR SESIÓN
+                            </button>
+                        </form>
+                    </div>
+                   
+                    <div class="center aligned column">     
+                        <strong>También puedes loguearte con</strong>                
+                        <!--<ms-social-login on-errors="$ctrl.onSocialLoginErrors(errors)"></ms-social-login>-->
+                    </div>
+                </div>
+                <div class="ui vertical divider">
+                        O
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>

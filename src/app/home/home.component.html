@@ -1,0 +1,16 @@
+<h2>{{titulo}}</h2>
+<hr>
+Fecha: {{ fecha | date:'dd/MM/yy' }} - 
+Fecha: {{ fecha | date:'fullDate' | uppercase }}
+<br>
+{{5 | conversor : 7}}
+<hr>
+<br>
+<input type="text" [(ngModel)]="prenda_a_guardar"><button (click)="addPrenda()">Añadir Prenda</button>
+<h3>Listado de prendas</h3>
+<ul>
+	<li *ngFor="let prenda of listado_ropa let i = index">
+		{{prenda}}
+		<button (click)="eliminarPrenda(i)">Eliminar</button>
+	</li>
+</ul>

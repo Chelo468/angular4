@@ -1,0 +1,51 @@
+.ms-grid {
+  box-sizing: border-box;
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+
+.ms-grid > .ms-row, .ms-grid > .ms-column, .ms-grid > .ms-row > .ms-column {
+  height: 0.1%;
+  position: relative;
+}
+
+.ms-grid > .ms-row {
+  display: table-row;
+  height: 1px;
+}
+
+.ms-grid > .ms-row.fluid {
+  height: auto;
+}
+
+.ms-grid > .ms-column, .ms-grid > .ms-row > .ms-column {
+  display: table-cell;
+  height: auto;
+  width: 1px;
+}
+
+.ms-grid > .ms-column.fluid, .ms-grid > .ms-row > .ms-column.fluid {
+  width: auto;
+}
+
+.ms-row {
+  display: table-row;
+  height: 1px;
+  width: auto;
+
+  .fluid {
+    height: auto;
+  }
+}
+
+.ms-column {
+  display: table-cell;
+  height: auto;
+  width: 1px;
+
+  .fluid {
+    width: auto;
+  }
+}
+	

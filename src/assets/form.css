@@ -1,0 +1,48 @@
+
+.ms-error-block {
+  padding-left: 5px;
+}
+
+.ms-error-block p {
+  color: #8B1820;
+}
+
+.ms-error-block.ng-active {
+  animation: fade_in_animation 0.4s linear;
+  -webkit-animation: fade_in_animation 0.5s linear;
+}
+
+.ms-error.ng-enter {
+  animation: fade_in_animation 0.4s linear;
+  -webkit-animation: fade_in_animation 0.5s linear;
+}
+
+.ui.form input.ng-invalid.ng-touched {
+  border-color: #8B1820;
+  color: #8B1820;
+  box-shadow: none;
+}
+
+.ui.form textarea.ng-invalid.ng-touched {
+  border-color: #8B1820;
+  color: #8B1820;
+  box-shadow: none;
+}
+
+@keyframes fade_in_animation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fade_in_animation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
